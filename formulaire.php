@@ -15,7 +15,7 @@
 	<body>
     <div class="container">
       <form action="" method="POST" name="formulaire" id="formulaire">
-        <section>
+        <fieldset>
           <h3>A faire</h3>
           <ul id="incomplete-tasks">
             <li><input type="checkbox"><label>Faire les courses</label><input type="text"><button class="edit">Modifier</button><button class="delete">Supprimer</button></li>
@@ -26,12 +26,12 @@
           <ul id="completed-tasks">
             <li><input type="checkbox" checked><label>Payer la facture sibelga</label><input type="text"><button class="edit">Modifier</button><button class="delete">Supprimer</button></li>
           </ul>
-        </section>
-        <section>
+        </fieldset>
+        <fieldset>
             <p>
               <label for="new-task">Ajouter une tache</label><input id="new-task" type="text"><button>Ajouter</button>
             </p>
-        </section>
+        </fieldset>
       </form>
     </div>
   <script src="todo.json"></script>
