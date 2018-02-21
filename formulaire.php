@@ -30,7 +30,6 @@ if(isset($_POST['submit'])){
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
-    <script src="todo.json"></script>
 		<title>To do</title>
 	</head>
 	<body>
@@ -39,19 +38,14 @@ if(isset($_POST['submit'])){
         <fieldset>
           <h3>A faire</h3>
           <ul id="incomplete-tasks">
-            <li><input type="checkbox"><label>Faire les courses</label><input type="text"><button class="edit">Modifier</button><button class="delete">Supprimer</button></li>
-            <li class="editMode"><input type="checkbox"><label>Terminer le projet "QCM"</label><input type="text" value="Terminer le projet 'QCM'"><button class="edit">Modifier</button><button class="delete">Supprimer</button></li>
+            <li><input type="checkbox" name="todo" value="todo1"><label>Faire les courses</label><input type="text"><button class="edit">Modifier</button><button name="delete" type="submit" form="formulaire" class="delete">Supprimer</button></li>
+            <li class="editMode"><input type="checkbox" name="todo" value="todo2"><label>Terminer le projet "QCM"</label><input type="text" value="Terminer le projet 'QCM'"><button name="edit" type="submit" form="formulaire" class="edit">Modifier</button><button name="delete" type="submit" form="formulaire" class="delete">Supprimer</button></li>
           </ul>
-          <button>Enregistrer</button>
+          <button name="submit" type="submit" form="formulaire">Enregistrer</button>
           <h3>Archive</h3>
           <ul id="completed-tasks">
-            <li><input type="checkbox" checked><label>Payer la facture sibelga</label><input type="text"><button class="edit">Modifier</button><button class="delete">Supprimer</button></li>
+            <li><input type="checkbox" type="checkbox" name="archive" value="archive1" checked><label>Payer la facture sibelga</label><input type="text"><button name="edit" type="submit" form="formulaire" class="edit">Modifier</button><button name="delete" type="submit" form="formulaire" class="delete">Supprimer</button></li>
           </ul>
-        </fieldset>
-        <fieldset>
-            <p>
-              <label for="new-task">Ajouter une tache</label><input id="new-task" type="text"><button>Ajouter</button>
-            </p>
         </fieldset>
       </form>
     </div>
